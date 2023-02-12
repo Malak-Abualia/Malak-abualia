@@ -1,0 +1,63 @@
+<mvc:View
+	displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	 xmlns:semantic="sap.m.semantic"
+	height="100%"
+	xmlns="sap.m"
+	controllerName="opensap.myapp.controller.App">
+	<App>
+		<pages>
+			<Page title="Customer">
+				<content>
+		<IconTabBar
+						id="idTopLevelIconTabBar"
+						class="sapUiResponsiveContentPadding">
+						<items>
+							<IconTabFilter id="layouts" text="{i18n>firstFilter}" >
+							
+							
+								<f:SimpleForm id="simpleFormChange"
+									title="General Information"
+									editable="true"
+									class="sapUiSmallMarginTopBottom">
+									<f:content>
+										<Label text="{i18n>layoutFormbusienes}"/>
+										<Input value="{General Information>/Business partner}"/>
+										<Label text="{i18n>layoutFormStreet}"/>
+										<Input value="{General Information>/Street}"/>
+										<Label text="{i18n>layoutFormFname}"/>
+										<Input value="{General Information>/First Name}" />
+										<Label text="{i18n>layoutFormLname}"/>
+										<Input value="{General Information>/Last Name}" />
+										</f:content>
+										<List>
+											<InputListItem label="Gender">
+												<Select>
+												<core:Item key=M text="Male" />
+												<core:Item key=Fe text="Female" />
+												</Select>
+												</InputListItem>
+										</List>
+							</f:SimpleForm>
+								<Toolbar>
+									<ToolbarSpacer/>
+									<Button
+										text="{i18n>Save}"
+										icon="sap-icon://outbox"
+										type="Accept"/>
+									<Button
+										text="{i18n>layoutCancelButton}"
+										icon="sap-icon://save" />
+								</Toolbar>
+							</IconTabFilter>
+							
+						</items>
+					</IconTabBar>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
